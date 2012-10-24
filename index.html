@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script type = "text/javascript" src="js/three.min.js"></script>
+		<script type = "text/javascript" src="js/jquery-1.8.2.min.js"></script>
+		<script type = "text/javascript" src="js/jquery.uniform.min.js"></script>
+		<script type = "text/javascript" src="js/voxel2D.js"></script>
+		<link rel="stylesheet" href="css/uniform.default.css" type="text/css" media="screen" charset="utf-8" />
+		<style type="text/css">
+			#widget  table 
+			{
+				float: left;	
+			}
+			#widget  canvas
+			{
+				float: left;
+			}
+			#widget td input
+			{
+				width: 4em;
+			}
+		</style>
+		<script type = "text/javascript">$(document).ready(function () {renderer.init('#widget');$('#widget input').uniform();});</script>
+	</head>
+	<body>
+
+		
+		<div id = "widget">
+			<div id="controls">
+				<label for="voxel">
+				<input id="voxel" type="checkbox" checked="checked" />Mostrar Voxels</label>
+				<label for="marching">
+				<input id="marching" type="checkbox" checked="checked" />Mostrar Marching Squares</label>
+				<label for="isovalue">Isovalue</label>
+				<input id="isovalue" type="number" min="0" max="100" step="10" value="50" />
+			</div>
+			<table>
+			</table>
+			
+		</div>
+	</body>
+</html>
