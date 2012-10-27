@@ -187,10 +187,10 @@ var renderer = (function($)
 		}
 	}
 	return {
-		init: function (parent)
+		init: function (parent, voxelField)
 		{
 			var parent = $(parent);
-			field = new VoxelField(4, 4);	
+			field = voxelField;	
 			
 			//Create voxel editor
 			var table = parent.find('table');

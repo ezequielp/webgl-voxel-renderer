@@ -14,12 +14,38 @@
 			{
 				float: left;
 			}
+			#widget td
+			{
+				margin:0;
+				padding:0;
+			}
+			#widget td:last-child
+			{
+				padding-right: 1px;
+			}
 			#widget td input
 			{
 				width: 4em;
+				margin:0;
+			}
+			#widget table {
+				border-spacing: 0;
+				border-collapse:collapse;
+			}
+			#widget table td input::-webkit-outer-spin-button,
+			#widget table td input::-webkit-inner-spin-button {
+			    -webkit-appearance: none;
+			    margin: 0;
+			}
+			#widget table td input::-webkit-outer-spin-button:focus,
+			#widget table td input::-webkit-inner-spin-button:focus  {
+				background: yellow;
+			    -webkit-appearance: textfield;
 			}
 		</style>
-		<script type = "text/javascript">$(document).ready(function () {renderer.init('#widget');$('#widget input').uniform();});</script>
+		<script type = "text/javascript">$(document).ready(function () {
+			renderer.init('#widget', new VoxelField(5, 5));
+			});</script>
 	</head>
 	<body>
 
