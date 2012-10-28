@@ -9,7 +9,7 @@ function VoxelField(dI, dJ)
 		this.values = new Uint8Array(new ArrayBuffer(this.totalSize));
 	}
 	catch (err){
-		throw "Not supported";
+		this.values = new Array(this.totalSize);
 	}
 	this.caseVertex = [
 		[], //Case 0
@@ -178,7 +178,7 @@ var renderer = (function($)
 
 	function render()
 	{
-		var material = new THREE.LineBasicMaterial({color:  0x000000,});
+		var material = new THREE.LineBasicMaterial({color:  0x000000});
 		var marchingCubeGeometry = new THREE.Geometry();
 		
 		var scale = cameraSize/Math.max(field.dimI-1, field.dimJ-1);
