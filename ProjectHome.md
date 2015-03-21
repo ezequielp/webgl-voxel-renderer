@@ -1,0 +1,1 @@
+At the moment it is only 2D. I'll upload 3D demos soon.
